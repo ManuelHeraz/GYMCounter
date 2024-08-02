@@ -356,34 +356,37 @@ header.shadow .logo{
     color: var(--second-color);
 }
 
+
 .checklist {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px; /* Increased gap for better separation */
 }
 
 .checklist label {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.8rem; /* Smaller font size for text */
     font-weight: 500;
     color: var(--text-color);
-    width: calc(50% - 4px); /* Half the width minus half the gap */
+    width: calc(50% - 8px); /* Half the width minus half the gap */
+    text-align: center; /* Center align text */
 }
 
 .checklist input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 46px; /* Larger size for checkbox */
+    height: 46px;
     border-radius: 50%;
     background-color: var(--checkbox-bg);
-    border: 2px solid var(--checkbox-border);
+    border: 1.5px solid var(--checkbox-border); /* Thinner border */
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+    margin-bottom: 4px; /* Space between checkbox and text */
 }
 
 .checklist input[type="checkbox"]:checked {
@@ -393,7 +396,7 @@ header.shadow .logo{
 
 .checklist input[type="checkbox"]:checked::before {
     content: "\2713";
-    font-size: 14px;
+    font-size: 20px; /* Slightly larger checkmark */
     color: var(--bg-color);
     position: absolute;
     top: 50%;
@@ -507,21 +510,21 @@ header.shadow .logo{
     }
 
     .checklist {
-        gap: 5px;
+        gap: 10px;
     }
 
     .checklist label {
-        font-size: 0.875rem;
-        width: calc(50% - 2.5px); /* Adjusted for smaller screens */
+        font-size: 0.75rem; /* Smaller font size for mobile */
+        width: calc(50% - 5px); /* Adjusted for smaller screens */
     }
 
     .checklist input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
+        width: 56px; /* Increased size for easier interaction on mobile */
+        height: 56px;
     }
 
     .checklist input[type="checkbox"]:checked::before {
-        font-size: 12px;
+        font-size: 20px; /* Slightly larger checkmark for the larger checkbox */
     }
 }
 
